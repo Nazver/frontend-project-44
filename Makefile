@@ -1,3 +1,5 @@
+brain-calc:
+    bin/brain-calc.js
 install:
     npm ci
 
