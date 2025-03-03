@@ -1,6 +1,12 @@
-#!/usr/bin/env node
-import cli from '../index.js';
+import readlineSync from 'readline-sync';
 
-console.log('Welcome to the Brain Games!');
-
-cli();
+export default function welcome(description) {
+    console.log('Welcome to the Brain Games!')
+    const name = readlineSync.question('May I have your name? ')
+    console.log('Hello, ' + name + '!')
+    if (description != undefined){
+        console.log(description)
+    }
+    return name
+}
+export const isEven = (num) => num % 2 === 0 ? 'yes' : 'no';
