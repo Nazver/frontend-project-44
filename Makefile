@@ -1,5 +1,12 @@
+brain-progression:
+    bin/brain-progression.js
+    
+brain-gcd:
+    bin/brain-gcd.js
+
 brain-calc:
     bin/brain-calc.js
+    
 install:
     npm ci
 
