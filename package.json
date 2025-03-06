@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "bin": {
+    "brain-prime":"bin/brain-prime.js",
     "brain-progression": "bin/brain-progression.js",
     "brain-gcd" : "bin/brain-gcd.js",
     "brain-games": "bin/brain-games.js",

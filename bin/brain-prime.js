@@ -1,19 +1,19 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import welcome, { isEven, randomNumber } from '../src/cli.js';
+import welcome, { randomNumber, prime } from '../src/cli.js';
 
-export default function game(name) {
+export default function gamePrime(name) {
   let count = 0;
-  console.log("Answer 'yes' if the number is even, otherwise answer 'no'.");
+  console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
   while (count < 3) {
-    const randNumber = randomNumber();
-    console.log(`Question: ${randNumber}`);
+    const random1 = randomNumber(1, 100);
+    const correct = prime(random1);
+    console.log(`Question: ${random1}`);
+    console.log(correct);
     const answer = readlineSync.question('Your answer: ');
-    const correct = isEven(randNumber);
-
     if (correct === answer) {
       console.log('Correct');
-      count = +1;
+      count += 1;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`);
       console.log(`Let's try again, ${name}`);
@@ -23,4 +23,4 @@ export default function game(name) {
   console.log(`Congratulations, ${name}`);
 }
 
-game(welcome());
+gamePrime(welcome());

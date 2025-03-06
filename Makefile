@@ -1,3 +1,6 @@
+brain-prime:
+   bin/brain-prime.js
+
 brain-progression:
     bin/brain-progression.js
     
