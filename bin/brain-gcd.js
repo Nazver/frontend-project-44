@@ -20,6 +20,6 @@ export default function gameGcd(name) {
       return;
     }
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 }
 gameGcd(welcome());

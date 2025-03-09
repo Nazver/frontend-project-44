@@ -35,6 +35,6 @@ export default function gameProgression(name) {
     console.log('Correct');
   }
 
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 }
 gameProgression(welcome());

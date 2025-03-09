@@ -33,7 +33,7 @@ export default function game(name) {
       return;
     }
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 }
 
 game(welcome());

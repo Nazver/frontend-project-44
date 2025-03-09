@@ -19,7 +19,7 @@ export default function gamePrime(name) {
       return;
     }
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 }
 
 gamePrime(welcome());
