@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { chek, isEven, randomNumber } from '../src/cli.js';
-import welcome from './brain-games.js';
+import welcome, { isEven, randomNumber } from '../src/cli.js';
 
 export default function game(name) {
   let count = 0;
@@ -12,7 +11,7 @@ export default function game(name) {
     const answer = readlineSync.question('Your answer: ');
     const correct = isEven(randNumber);
 
-    if (`${correct}` === `${answer}`) {
+    if (correct === answer) {
       console.log('Correct');
       count += 1;
     } else {
@@ -20,9 +19,8 @@ export default function game(name) {
       console.log(`Let's try again, ${name}`);
       return;
     }
-    console.log(`Congratulations, ${name}`);
   }
+  console.log(`Congratulations, ${name}`);
 }
-
 
 game(welcome());

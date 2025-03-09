@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { randomNumber } from '../src/cli.js';
-import welcome from './brain-games.js';
+import welcome, { randomNumber } from '../src/cli.js';
 
 const calculate = (num1, num2, sign) => {
   const getAnswer = {
@@ -33,8 +32,8 @@ export default function game(name) {
       console.log(`Let's try again, ${name}`);
       return;
     }
-    console.log(`Congratulations, ${name}`);
   }
+  console.log(`Congratulations, ${name}`);
 }
 
 game(welcome());

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { randomNumber, prime } from '../src/cli.js';
-import welcome from './brain-games.js';
+import welcome, { randomNumber, prime } from '../src/cli.js';
 
 export default function gamePrime(name) {
   let count = 0;
@@ -11,13 +10,14 @@ export default function gamePrime(name) {
     const correct = prime(random1);
     console.log(`Question: ${random1}`);
     const answer = readlineSync.question('Your answer: ');
-    if (correct !== answer) {
+    if (correct === answer) {
+      console.log('Correct');
+      count += 1;
+    } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`);
       console.log(`Let's try again, ${name}`);
       return;
-    }  
-      console.log('Correct');
-      count += 1;
+    }
   }
   console.log(`Congratulations, ${name}`);
 }
