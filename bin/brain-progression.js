@@ -21,7 +21,7 @@ export default function gameProgression(name) {
     const correct = progression[random1];
     progression[random1] = '..';
 
-    console.log(`Quesion: ${progression.join(' ')}`);
+    console.log(`Question: ${progression.join(' ')}`);
 
     const answer = readlineSync.question('Your answer: ');
 
