@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import welcome, { randomNumber } from '../src/cli.js';
+import { randomNumber } from '../src/cli.js';
+import welcome from './brain-games.js';
 
 export default function gameProgression(name) {
   console.log('What number is missing in the progression?');

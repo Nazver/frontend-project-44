@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import welcome, { randomNumber, gcd } from '../src/cli.js';
+import { randomNumber, gcd } from '../src/cli.js';
+import welcome from './brain-games.js';
 
 export default function gameGcd(name) {
   let count = 0;

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
 export default function welcome(description) {
@@ -9,4 +10,4 @@ export default function welcome(description) {
   }
   return name;
 }
-export const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
+welcome()
