@@ -4,7 +4,7 @@ import welcome, { randomNumber, prime } from '../src/cli.js';
 
 export default function gamePrime(name) {
   let count = 0;
-  console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   while (count < 3) {
     const random1 = randomNumber(1, 100);
     const correct = prime(random1);
