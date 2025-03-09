@@ -16,7 +16,7 @@ export default function gameGcd(name) {
       count += 1;
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`);
-      console.log(`Let's try again, ${name}`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }

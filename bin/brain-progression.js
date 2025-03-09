@@ -27,7 +27,7 @@ export default function gameProgression(name) {
 
     if (correct.toString() !== answer.toString()) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`);
-      console.log(`Let's try again, ${name}`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
 
