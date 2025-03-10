@@ -8,7 +8,7 @@ export default function gameGcd(name) {
   while (count < 3) {
     const random1 = randomNumber(1, 10);
     const random2 = randomNumber(1, 10);
-    const correct = String(gcd(random1, random2)); // correct приводится к строке
+    const correct = String(gcd(random1, random2));
     console.log(`Question: ${random1} ${random2}`);
     const answer = readlineSync.question('Your answer: ');
 
