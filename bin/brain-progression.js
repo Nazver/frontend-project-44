@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import welcome, { randomNumber } from '../src/cli.js';
+import welcome, { checkAnswer, randomNumber } from '../src/cli.js';
 
 export default function gameProgression(name) {
   console.log('What number is missing in the progression?');
@@ -18,21 +18,18 @@ export default function gameProgression(name) {
     }
 
     const random1 = randomNumber(0, progression.length - 1);
-    const correct = progression[random1];
+    const correct = String(progression[random1]);
     progression[random1] = '..';
 
     console.log(`Question: ${progression.join(' ')}`);
 
     const answer = readlineSync.question('Your answer: ');
 
-    if (correct.toString() !== answer.toString()) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`);
-      console.log(`Let's try again, ${name}!`);
+    if (checkAnswer(answer, correct, name)) {
+      counter += 1;
+    } else {
       return;
     }
-
-    counter += 1;
-    console.log('Correct');
   }
 
   console.log(`Congratulations, ${name}!`);

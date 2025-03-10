@@ -24,3 +24,12 @@ export const prime = (num) => {
   }
   return 'yes';
 };
+export const checkAnswer = (answer, correct, name) => {
+  if (correct === answer) {
+    console.log('Correct');
+    return true;
+  }
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`);
+  console.log(`Let's try again, ${name}!`);
+  return false;
+};

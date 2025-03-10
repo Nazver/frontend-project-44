@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import welcome, { randomNumber } from '../src/cli.js';
+import welcome, { checkAnswer, randomNumber } from '../src/cli.js';
 
 const calculate = (num1, num2, sign) => {
   const getAnswer = {
@@ -24,12 +24,9 @@ export default function game(name) {
     console.log(`Question: ${random1} ${random3} ${random2}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (Number(correct) === Number(answer)) {
-      console.log('Correct');
+    if (checkAnswer(Number(answer), correct, name)) {
       count += 1;
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`);
-      console.log(`Let's try again, ${name}!`);
       return;
     }
   }
